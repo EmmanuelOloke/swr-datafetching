@@ -1,8 +1,4 @@
-export interface ResponseInterface {
-  results: ResultsEntity[] | null;
-  info: Info;
-}
-export interface ResultsEntity {
+export type ResultsProperties = {
   gender: string;
   name: Name;
   location: Location;
@@ -15,13 +11,13 @@ export interface ResultsEntity {
   id: Id;
   picture: Picture;
   nat: string;
-}
-export interface Name {
+};
+export type Name = {
   title: string;
   first: string;
   last: string;
-}
-export interface Location {
+};
+export type Location = {
   street: Street;
   city: string;
   state: string;
@@ -29,20 +25,20 @@ export interface Location {
   postcode: number | string;
   coordinates: Coordinates;
   timezone: Timezone;
-}
-export interface Street {
+};
+export type Street = {
   number: number;
   name: string;
-}
-export interface Coordinates {
+};
+export type Coordinates = {
   latitude: string;
   longitude: string;
-}
-export interface Timezone {
+};
+export type Timezone = {
   offset: string;
   description: string;
-}
-export interface Login {
+};
+export type Login = {
   uuid: string;
   username: string;
   password: string;
@@ -50,23 +46,23 @@ export interface Login {
   md5: string;
   sha1: string;
   sha256: string;
-}
-export interface DobOrRegistered {
+};
+export type DobOrRegistered = {
   date: string;
   age: number;
-}
-export interface Id {
+};
+export type Id = {
   name: string;
   value?: string | null;
-}
-export interface Picture {
+};
+export type Picture = {
   large: string;
   medium: string;
   thumbnail: string;
-}
-export interface Info {
+};
+export type Info = {
   seed: string;
   results: number;
   page: number;
   version: string;
-}
+};
